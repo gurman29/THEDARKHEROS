@@ -1,0 +1,45 @@
+<header><div >
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="nav">
+      <a class="navbar-brand" id="brand" href="/">DARK HEROES</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" >
+            <a class="nav-link"  id="navitem" href="/">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" id="navitem" href="/clan">VIEW CLAN</a>
+          </li>
+          <li class="nav-item dropdown" id="navitem">
+            <a class="nav-link dropdown-toggle" id="navitem" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              MORE
+            </a>
+            <div class="dropdown-menu bg-dark drops" aria-labelledby="navbarDropdown">
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-success font-weight-bold" href="/warlog">WARLOG</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-success font-weight-bold" href="/layouts">VIEW BASE LAYOUTS</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-success font-weight-bold" href="/video">VIDEOS</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-success font-weight-bold" href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=CQJ9CCR9">VIEW CLAN IN COC</a>
+            </div>
+          </li>
+        </ul><form class="form-inline my-2 my-lg-0" action="/logout" method="GET">
+          <% if (typeof user != 'undefined' ) { %>
+          <h5 class="hello"> Hello &nbsp; </h5><h5 class="player"><%= user.playername %></h5>  &nbsp; <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">LOGOUT</button> 
+         <% } else{ %>
+      </form> 
+        <form class="form-inline my-2 my-lg-0">
+          <a class="btn btn-outline-success my-2 my-sm-0" href="/register" type="submit">REGISTER</a>
+          <a class="btn btn-outline-success my-2 my-sm-0" href="/login" type="submit">LOG IN</a>
+          <% } %>
+          
+        </form>
+      </div>
+    </nav>
+</div>
+</header>

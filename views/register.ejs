@@ -1,0 +1,60 @@
+<html>
+    <head>
+      <title>THE DARK HEROS</title>
+        <link rel="icon" href="img/icon.png">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=0.1">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="register.css">
+        <link rel="stylesheet" href="header1.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <%- include('partials/header.ejs') %>
+      <div>
+      <form class="log" action="/register" method="POST">
+      <fieldset>
+        <div class="form-group row">
+        </div>
+        <h3>REGISTER</h3> 
+        <% if (typeof err!= 'undefined') {%>
+            <div class="alert alert-dismissible alert-danger">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong><%= err %></strong>
+            </div>
+          <%}%>
+        <div class="form-group field1">
+          <label for="Email"><strong>Email address</strong></label>
+          <input type="email" name="email" class="form-control inp" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group fields">
+          <label for="Password"><strong>Name</strong></label>
+          <input type="text" name="name" class="form-control inp" id="exampleInputPassword1" placeholder="Enter Name">
+        </div>
+        <div class="form-group fields">
+          <label for="Password"><strong>COC Player Name</strong></label>
+          <input type="text" minlength="10" maxlength="10" name="playername" class="form-control inp" id="exampleInputPassword1" placeholder="Enter COC Player Name">
+        </div>
+        <div class="form-group fields">
+          <label for="Email"><strong>Player Tag</strong></label>
+          <small id="emailHelp" class="form-text text-muted">Include # with tag</small>
+          <input type="text" pattern="^#.*[a-zA-Z0-9]$" name="tag" class="form-control inp" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Player Tag">
+        </div>
+        <div class="form-group fields">
+          <label for="Password"><strong>Phone Number</strong></label>
+          <input type="text" name="phonenumber" class="form-control inp" id="exampleInputPassword1" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group fields">
+          <label for="Password"><strong>Password</strong></label>
+          <input type="password" name="password" class="form-control inp" id="exampleInputPassword1" placeholder="Password" minlength="6" >
+        </div>
+        <button type="submit" class="btn btn-primary">REGISTER</button>
+      </fieldset>
+    </form>
+  </div>
+    </body>
+</html>

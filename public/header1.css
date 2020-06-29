@@ -1,0 +1,82 @@
+#navitem{
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+#brand
+{ font-family: 'Nosifer', cursive;
+    font-size: 27px;
+    color: rgb(113, 255, 70);
+
+}
+#nav{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+.hello{
+    font-family: 'Nosifer', cursive;
+    font-size: 35px;
+    color: rgb(251, 255, 0);
+}
+.player{
+    font-family: 'Nosifer', cursive;
+    font-size: 35px;
+    color: rgb(113, 255, 70);
+}
+.footbrand{
+    font-family: 'Nosifer', cursive;
+    font-size: 35px;
+    color: rgb(113, 255, 70);
+    height: 100%;
+    text-align: center;
+}
+footer ul li {
+    color: #fff; 
+     display: inline;
+     list-style: none;
+ 
+ }
+ footer ul li div {
+     font-family: 'Nosifer', cursive;
+     text-transform: uppercase;
+     display: list-item;
+     font-size: 25px;
+     font-weight: 900;
+     color: #fff;
+     margin: 10px;
+     text-align: center;
+ }
+ footer ul {
+    width: fit-content;
+    float: left;
+}
+h5{
+    color: rgb(255, 49, 49);
+}
+#buttn{
+    font-size: 25px;
+    font-weight: bolder;
+    border: width 10px;
+    border-radius: 6px;
+}
+#buttn:hover{
+    background-color: rgb(55, 214, 55);
+    color: rgb(0, 174, 255);
+}
+footer {
+    background-color: #111;
+}
+/* for phone */
+
+@media only screen and (max-width: 400px) {
+    
+    footer ul li div {
+        font-size: 15px;
+  }
+  #buttn{
+      font-size: 23px;
+      margin-top: 10px;
+  }
+}

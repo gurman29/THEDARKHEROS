@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>THE DARK HEROS</title>
+    <link rel="icon" href="img/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, minimum-scale=0.1">
+    <link rel="stylesheet" href="index1.css">
+    <link rel="stylesheet" href="header1.css">
+    <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+  
+  </head>
+
+  <body>
+    <div >
+      <%- include('partials/header.ejs') %>
+
+
+  <section >
+    <div class="jumbotron container-fluid" id="heading">
+      <div class="row">
+        <div class="col-sm-6" ><p class="display-4" id="heading1">Welcome to <br> DARK HEROES</p></div>
+      </div>      
+      <br>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-sm-4" ></div>
+      <p class="col-sm-8" class="lead" id="heading2">HAVE COURAGE.<br>WE STILL HAVE OUR CLAN.<br>THERE IS ALWAYS A HOPE.</p>
+    </div>
+    </div>
+    
+    </section>
+    <p class="home">THE HOME TO THE HEROS OF DARKNESS</p>
+    <br>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+      </ul>
+    
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="imgcarousel" src="img/clan.png">
+        </div>
+        <div class="carousel-item">
+          <img class="imgcarousel" src="img/cwl.png">
+        </div>
+        <div class="carousel-item">
+          <img class="imgcarousel" src="img/clanrank.png" >
+        </div>
+        <div class="carousel-item">
+          <img  src="img/war1.png" >
+        </div>
+        <div class="imgcarousel" class="carousel-item" >
+          <img src="img/war2.png" class="imgcarousel" >
+        
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+</div>
+<br>
+<!-- clan details -->
+<div class="container-fluid row clancontainer">
+  <div class="col-sm-2 clanicon">
+   <img class="clanimg" src="<%=doc[0].badgeUrls%>" >
+  </div>
+  <div class="col-sm-5 discription">
+    <br>
+    <h3><%=doc[0].name%></h3>
+    <h5><%=doc[0].description%></h5>
+  </div>
+  <div class="col-sm-5">
+    <div class="row"> 
+    <ul class="col-6 clandetails">
+      <br>
+     <li>TAG</li>
+     <li>CLAN POINTS</li>
+     <li>VERSUS POINTS</li>
+     <li>LOCATION</li>
+     <li>WAR LEAGUR</li>
+     <li>WAR WIN</li>
+     <li>MEMBERS</li>
+     <li>TYPE</li>
+    </ul>
+    <ul class="col-6 clandetails one">
+      <br>
+      <li><%=doc[0].tag%></li>
+      <li><%=doc[0].clanPoints%></li>
+      <li><%=doc[0].clanVersusPoints%></li>
+      <li><%=doc[0].location%></li>
+      <li><%=doc[0].warLeague%></li>
+      <li><%=doc[0].warWins%></li>
+      <li><%=doc[0].members%></li>
+      <li><%=doc[0].type%></li>
+     </ul>
+  </div>
+  </div>
+ </div>
+ 
+<!-- button -->
+
+<%- include('partials/button.ejs') %>
+  
+  <%- include('partials/footer.ejs') %>
+        </div>
+  </body>
+</html>
