@@ -56,6 +56,9 @@
           <img class="imgcarousel" src="img/clan.png">
         </div>
         <div class="carousel-item">
+          <img class="imgcarousel" src="img/cg.png">
+        </div>
+        <div class="carousel-item">
           <img class="imgcarousel" src="img/cwl.png">
         </div>
         <div class="carousel-item">
@@ -87,7 +90,7 @@
   <div class="col-sm-5 discription">
     <br>
     <h3><%=doc[0].name%></h3>
-    <h5><%=doc[0].description%></h5>
+    <div class="desc"><%=doc[0].description%></div>
   </div>
   <div class="col-sm-5">
     <div class="row"> 
@@ -95,7 +98,7 @@
       <br>
      <li>TAG</li>
      <li>CLAN POINTS</li>
-     <li>VERSUS POINTS</li>
+     <li class="ver">VERSUS POINTS</li>
      <li>LOCATION</li>
      <li>WAR LEAGUR</li>
      <li>WAR WIN</li>
@@ -108,7 +111,7 @@
       <li><%=doc[0].clanPoints%></li>
       <li><%=doc[0].clanVersusPoints%></li>
       <li><%=doc[0].location%></li>
-      <li><%=doc[0].warLeague%></li>
+      <li class="ver"><%=doc[0].warLeague%></li>
       <li><%=doc[0].warWins%></li>
       <li><%=doc[0].members%></li>
       <li><%=doc[0].type%></li>

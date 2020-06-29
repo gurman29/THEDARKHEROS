@@ -35,7 +35,10 @@
     height: 300px;
 }
 
-
+.desc{
+    color: red;
+    font-size: 110%;
+}
 .clancontainer{
     background-color: rgb(255, 239, 17);
 }
@@ -102,7 +105,7 @@
             color: #111;
             text-align: left;
             text-shadow: 5px 5px#fff;
-        }
+        } 
 
         #heading2 {
             font-family: 'Nosifer', cursive;
@@ -131,6 +134,13 @@
         .clandetails{
             font-size: 10px;
         }
+        .ver{
+            font-size: 85%;
+        }
+        .desc{
+            font-size: 80%;
+        }
+
   }
 
   
